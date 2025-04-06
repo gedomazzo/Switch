@@ -38,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPush(View view) {
+        if ((sw.isChecked()) && (tg.isChecked())) {
+            layout.setBackgroundColor(Color.RED);
+
+        } else if ((sw.isChecked()) && !(tg.isChecked())) {
+            layout.setBackgroundColor(Color.BLUE);
+
+        } else if (!(sw.isChecked()) && (tg.isChecked())) {
+            layout.setBackgroundColor(Color.GREEN);
+
+        } else if (!(sw.isChecked()) && !(tg.isChecked())) {
+            layout.setBackgroundColor(Color.YELLOW);
+        }
 
     }
 }
